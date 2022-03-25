@@ -1,0 +1,12 @@
+.main-page{
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+}
+
+.products{
+    border:1px solid red;
+}
+
+.products-info{
+    border: 1px solid blue;
+}
