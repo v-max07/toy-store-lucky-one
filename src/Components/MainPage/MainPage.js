@@ -1,5 +1,6 @@
 import { faTrashCan } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { queryAllByAttribute } from '@testing-library/react';
 import React, { useEffect, useState } from 'react';
 import Item from '../Item/Item';
 import './MainPage.css';
@@ -7,6 +8,7 @@ import './MainPage.css';
 const MainPage = () => {
     const [items, setItems] = useState([]);
     const [itemsInfo, setItemsInfo] = useState([]);
+    const [randomItem, setRandomItem] = useState([])
 
     useEffect(() => {
         fetch("toy_data.json")
@@ -17,13 +19,34 @@ const MainPage = () => {
 
         // set onclick function to show items info
     const addItem = id => {
+        let selectedItems;
         // console.log(id);
+        if (itemsInfo.length === 4) {
+            alert("Sorry, You Can Choose Only 4 Items!!!")
+        } else {
+                if (itemsInfo.includes(id)) {
+                    alert("You already add this item!")
+                } else {
+                    selectedItems = [...itemsInfo, id];
+                    setItemsInfo(selectedItems);
+                }  
+        }
+        
+        // console.log(selectedItems); 
 
-        const selectedItems = [...itemsInfo, id];
-        setItemsInfo(selectedItems);
-        console.log(selectedItems);
+    };
 
-    }
+    const freeToy = () => { 
+        let randomNumber;
+        randomNumber = Math.floor((Math.random() * 4));
+
+        const newRandomItem = itemsInfo[randomNumber];
+        setRandomItem(newRandomItem);
+        const x = Array.isArray(randomItem);
+        console.log(x);
+        
+    };
+
     return (
         <div className='main-page'>
             <div className="products">
@@ -33,8 +56,21 @@ const MainPage = () => {
             </div>
             <div className="products-info">
                 <h3><div className='messageBar'></div>Click the spin button if you want to get a free Toy!</h3>
-                <button className='spin-btn'>Spin</button>
+                <button onClick={freeToy} className='spin-btn'>Spin</button>
                 <button className='rest-btn'>Restart</button>
+
+                <div className='lotteryDiv'>
+                    <h2 style={{ color: "Orange" }}>
+                        <span style={{ fontSize: "32px" }}>C</span>ongratulations!</h2>
+                    <div>
+                        <p>You won this toy-</p>
+                        <img src={randomItem.image} alt="" />
+                        <p>Name:{randomItem.name}</p>
+                    </div>
+                </div>
+                
+
+
                 <div style={{border:" 1px solid blue", margin: "10px 0px", padding:"20px"}}>
                      {
                         itemsInfo.map(item => <div className='cart-item-info' key={item.id}><img src={item.image} alt="" />

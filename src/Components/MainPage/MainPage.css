@@ -23,7 +23,6 @@
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
     align-items: center;
-
     border: 1px solid #a2d870;
     border-radius: 10px;
     padding: 7px;
@@ -73,4 +72,13 @@
     border-radius: 4px;
     font-size: 16px;
     color: white;
+}
+
+/* lottery div style */
+.lotteryDiv{
+    /* border: 1px solid rgb(65, 65, 255); */
+}
+.lotteryDiv img{
+    width: 120px;
+    border-radius: 10px;
 }
