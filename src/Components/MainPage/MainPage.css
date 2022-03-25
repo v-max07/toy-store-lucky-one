@@ -5,11 +5,25 @@
 .products{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    padding: 98px 80px;
+    padding: 38px 40px;
     border:1px solid red;
 
 }
 
 .products-info{
     border: 1px solid blue;
+    padding: 38px 40px;
+}
+
+/* cart information style  */
+.cart-item-info{
+    font-size: 14px;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    align-items: center;
+}
+.cart-item-info img{
+    width: 50px;
+    border: 1px solid lawngreen;
+    border-radius: 10px;
 }

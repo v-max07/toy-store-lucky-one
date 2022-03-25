@@ -1,7 +1,7 @@
 import React from 'react';
 import './Item.css'
 
-const Item = ({ items }) => {
+const Item = ({ items, addItem }) => {
     // console.log(items); 
     const { name, balance, image, company } = items;
     return (
@@ -14,8 +14,7 @@ const Item = ({ items }) => {
                     <small>Manufacture: {company} </small>
                 </div>
 
-                 {/* onClick={() => clickHandler(info)} */}
-                <button className='btn-cart'>
+                <button className='btn-cart' onClick={() => addItem(items)}>
                     Add to Cart 
                 </button>
             </div>
