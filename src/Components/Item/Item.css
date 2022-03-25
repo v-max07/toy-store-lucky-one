@@ -1,6 +1,6 @@
 .product{
     width: 300px;
-    height: 490px;
+    height: 450px;
     border: 2px solid #95A0A7;
     border-radius: 8px;
     margin-bottom: 20px;
@@ -9,9 +9,9 @@
 }
 
 .product img{
-    width: 286px;
-    height: 286px;
-    margin:7px 7px 0px ;
+    width: 216px;
+    height: 216px;
+    margin:10px 41px ;
     border-radius: 5px;
 }
 .product-info{
@@ -23,13 +23,16 @@
 }
 
 .product button{
-    background-color: #e5fc65;
+    background-color: rgb(166, 88, 255);
     border: 1px solid #95A0A7;
     border-radius: 0px 0px 8px 8px;
     padding: 15px;
     width: 100%;
-    font-weight: bold;
+    font-weight: 300;
     color: #0E161A;
     position: absolute;
     bottom: 0;
+    font-size: 18px;
+    color: #ffff;
+
 }

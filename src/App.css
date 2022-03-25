@@ -8,14 +8,14 @@
 .storeName{
     text-align: center;
     font-family: 'Nanum Myeongjo', serif;
-    border: 1px solid rgb(162, 216, 112);
-    background-color: rgb(234, 255, 196);
     padding: 10px;
-    color: rgb(0, 0, 0);
+    color: rgba(153, 64, 255, 0.918);
+    font-weight: 400;
+    border-bottom: 1px solid blue;
 }
 .storeName span{
-    color: rgb(250, 141, 40);
+    color: rgb(255 88 219);
     font-family: 'Palette Mosaic', cursive;
     font-weight: 800;
-    font-size: 38px;
+    font-size: 48px;
 }
