@@ -1,13 +1,22 @@
-import React from 'react';
-import Products from '../Products/Products';
+import React, { useEffect, useState } from 'react';
+import Item from '../Item/Item';
 import './MainPage.css';
 
 const MainPage = () => {
+    const [items, setItems] = useState([]);
+
+    useEffect(() => {
+        fetch("toy_data.json")
+            .then(res => res.json())
+            .then(info => setItems(info))
+        
+    }, [])
     return (
         <div className='main-page'>
             <div className="products">
-                <h3>products page1</h3>
-                <Products></Products>
+                {
+                    items.map(item => <Item items={item} key={item.id}></Item>)
+                }
             </div>
             <div className="products-info">
                 <h3>info page 2</h3>
