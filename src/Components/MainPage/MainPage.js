@@ -42,8 +42,6 @@ const MainPage = () => {
 
         const newRandomItem = itemsInfo[randomNumber];
         setRandomItem(newRandomItem);
-        const x = Array.isArray(randomItem);
-        console.log(x);
         
     };
 
