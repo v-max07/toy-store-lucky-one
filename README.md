@@ -1,6 +1,8 @@
-# Getting Started with Create React App
+# Welcome to ToyStore !
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[Live site link](https://google.com).
+
+## This website is made with react js!!!! Not bad :)
 
 ## Available Scripts
 
