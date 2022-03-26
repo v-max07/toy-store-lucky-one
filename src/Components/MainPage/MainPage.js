@@ -41,6 +41,7 @@ const MainPage = () => {
 
         const newRandomItem = itemsInfo[randomNumber];
         setRandomItem(newRandomItem);
+        setItemsInfo([]);
         
     };
 
@@ -68,7 +69,8 @@ const MainPage = () => {
                     <div>
                         <p>You won this toy-</p>
                         <img src={randomItem.image} alt="" />
-                        <p>Name:{randomItem.name}</p>
+                        <p>Name: {randomItem.name}</p>
+                        <p>Price: {randomItem.balance}</p>
                     </div>
                 </div>
                 
