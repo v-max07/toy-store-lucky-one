@@ -23,6 +23,11 @@ const Footer = () => {
                 </ol>
             </div>
 
+            <div className='useState-work'>
+                <h2>2. How useState works?</h2>
+                <p>useState is a hook that allows you add React state to function components. We call it inside a function components. We call it inside a function  companent to add some local state to it. useState returns a pair - the current state value and a function that lets you update it. React will preserve this state between re-renders. You can call this function from an event handler or somewhere else.</p>
+            </div>
+
         </div>
     );
 };
