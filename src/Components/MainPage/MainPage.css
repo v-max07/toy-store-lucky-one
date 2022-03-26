@@ -82,3 +82,21 @@
     width: 120px;
     border-radius: 10px;
 }
+
+
+
+
+
+/* responsive    */
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  .main-page{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+.products{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
