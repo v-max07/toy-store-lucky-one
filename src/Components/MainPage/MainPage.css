@@ -81,6 +81,7 @@
 .lotteryDiv img{
     width: 120px;
     border-radius: 10px;
+    border: 2px solid rgba(252, 80, 80, 0.842);
 }
 
 

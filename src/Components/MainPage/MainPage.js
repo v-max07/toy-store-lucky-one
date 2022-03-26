@@ -1,6 +1,5 @@
 import { faTrashCan } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { queryAllByAttribute } from '@testing-library/react';
 import React, { useEffect, useState } from 'react';
 import Item from '../Item/Item';
 import './MainPage.css';
@@ -45,6 +44,10 @@ const MainPage = () => {
         
     };
 
+    const resetChoices = () => {
+        setItemsInfo([]);
+    }
+
     return (
         <div className='main-page'>
             <div className="products">
@@ -54,8 +57,10 @@ const MainPage = () => {
             </div>
             <div className="products-info">
                 <h3><div className='messageBar'></div>Click the spin button if you want to get a free Toy!</h3>
+
                 <button onClick={freeToy} className='spin-btn'>Spin</button>
-                <button className='rest-btn'>Restart</button>
+
+                <button onClick={resetChoices} className='rest-btn'>Restart</button>
 
                 <div className='lotteryDiv'>
                     <h2 style={{ color: "Orange" }}>
